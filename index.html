@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>EstateAgency Bootstrap Template</title>
+  <title> Propiedades Mariano Acosta </title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -180,7 +180,7 @@
         <span></span>
         <span></span>
       </button>
-      <a class="navbar-brand text-brand" href="index.html">Estate<span class="color-b">Agency</span></a>
+      <a class="navbar-brand text-brand" href="index.html">Default</a>
       <button type="button" class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse"
         data-target="#navbarTogglerDemo01" aria-expanded="false">
         <span class="fa fa-search" aria-hidden="true"></span>
@@ -294,7 +294,7 @@
   </style>
   
 
-  <!--/ Carousel Star /-->
+  <!--/ Portada Start /-->
   <div class="intro ">
 
     <div class="carousel-item-a intro-item bg-image" style="background-image: url(img/slide-1.jpg)">
@@ -327,7 +327,7 @@
       
     </div>
   </div>
-  <!--/ Carousel end /-->
+  <!--/ Portada end /-->
 
 
 
@@ -339,6 +339,73 @@
 
 
 
+<style>
+    .titulo-personalizado3 {
+      text-transform: none; /* Para desactivar el texto en mayúsculas */
+      font-family: 'Inter', sans-serif; /* Para aplicar la tipografía Inter */
+      color:black;
+      font-size: 4em;
+      font-weight: bold;
+      height: 50%;
+      padding: 0; /* Elimina todo el relleno */
+      height: 100vh; /* Ajusta la altura al 100% del viewport height */
+      display: flex;
+      justify-content: center; /* Centra horizontalmente los elementos */
+      align-items: center; /* Centra verticalmente los elementos */
+      margin-left: 2.5em;
+    }
+
+
+
+    #map-container {
+      height: 100%; /* Toma el 100% de la altura de su contenedor */
+      width: 100%;
+      position: relative; /* Para que los elementos internos se posicionen relativos a este contenedor */
+      overflow: hidden; /* Para ocultar cualquier contenido que exceda del contenedor */
+    }
+
+    #map {
+      width: 100%; /* Ocupa todo el ancho del contenedor */
+      height: 100%; /* Ocupa el 100% del espacio vertical disponible en la sección, restando 100px (ajusta según la altura de la barra de navegación u otros elementos fijos que tengas) */
+      max-width: 100%; /* Ocupa como máximo el 50% del ancho de la sección */
+    }
+
+    .section-personalizada {
+      padding: 0;
+      height: 100vh;
+    }
+
+    .container {
+      padding: 0; /* Elimina el padding */
+      margin: 0; /* Elimina el margin */
+      max-width: 100%;
+}
+</style>
+
+
+<!-- Agrega el siguiente script para cargar la API de Google Maps -->
+<script>
+  function initMap() {
+    // Coordenadas del lugar (Mariano Acosta, Provincia de Buenos Aires)
+    var marianoAcosta = {lat: -34.802961, lng: -59.239993};
+
+    // Crea un nuevo mapa dentro del div con id "map", centrado en las coordenadas especificadas
+    var map = new google.maps.Map(document.getElementById('map'), {
+      zoom: 14,
+      center: marianoAcosta
+    });
+
+    // Agrega un marcador en las coordenadas especificadas
+    var marker = new google.maps.Marker({
+      position: marianoAcosta,
+      map: map,
+      title: 'Mariano Acosta, Provincia de Buenos Aires'
+    });
+  }
+</script>
+
+<!-- Este script carga la API de Google Maps utilizando tu clave de API -->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=TU_CLAVE_DE_API&callback=initMap"></script>
 
 
 
@@ -347,98 +414,39 @@
 
 
 
+<!-- Google Maps Start -->
+<section class="section-personalizada">
 
-
-
-  <!--/ Services Star /-->
-  <section class="section-services section-t8">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="title-wrap d-flex justify-content-between">
-            <div class="title-box">
-              <h2 class="title-a">Our Services</h2>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card-box-c foo">
+          <div class="card-header-c d-flex">
+            <div class="card-title-c align-self-center">
+              <h1 class="titulo-personalizado3">Mariano Acosta, <br>Provincia<br> de Buenos Aires</h1>
             </div>
           </div>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card-box-c foo">
-            <div class="card-header-c d-flex">
-              <div class="card-box-ico">
-                <span class="fa fa-gamepad"></span>
-              </div>
-              <div class="card-title-c align-self-center">
-                <h2 class="title-c">Lifestyle</h2>
-              </div>
-            </div>
-            <div class="card-body-c">
-              <p class="content-c">
-                Sed porttitor lectus nibh. Cras ultricies ligula sed magna dictum porta. Praesent sapien massa,
-                convallis a pellentesque
-                nec, egestas non nisi.
-              </p>
-            </div>
-            <div class="card-footer-c">
-              <a href="#" class="link-c link-icon">Read more
-                <span class="ion-ios-arrow-forward"></span>
-              </a>
-            </div>
+      
+      <div class="col-md-6">
+        <!-- Aquí colocaremos el mapa -->
+        <div id="map-container">
+
+          <div id="map">
+
           </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card-box-c foo">
-            <div class="card-header-c d-flex">
-              <div class="card-box-ico">
-                <span class="fa fa-usd"></span>
-              </div>
-              <div class="card-title-c align-self-center">
-                <h2 class="title-c">Loans</h2>
-              </div>
-            </div>
-            <div class="card-body-c">
-              <p class="content-c">
-                Nulla porttitor accumsan tincidunt. Curabitur aliquet quam id dui posuere blandit. Mauris blandit
-                aliquet elit, eget tincidunt
-                nibh pulvinar a.
-              </p>
-            </div>
-            <div class="card-footer-c">
-              <a href="#" class="link-c link-icon">Read more
-                <span class="ion-ios-arrow-forward"></span>
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card-box-c foo">
-            <div class="card-header-c d-flex">
-              <div class="card-box-ico">
-                <span class="fa fa-home"></span>
-              </div>
-              <div class="card-title-c align-self-center">
-                <h2 class="title-c">Sell</h2>
-              </div>
-            </div>
-            <div class="card-body-c">
-              <p class="content-c">
-                Sed porttitor lectus nibh. Cras ultricies ligula sed magna dictum porta. Praesent sapien massa,
-                convallis a pellentesque
-                nec, egestas non nisi.
-              </p>
-            </div>
-            <div class="card-footer-c">
-              <a href="#" class="link-c link-icon">Read more
-                <span class="ion-ios-arrow-forward"></span>
-              </a>
-            </div>
-          </div>
+
         </div>
       </div>
     </div>
-  </section>
-  <!--/ Services End /-->
+  </div>
+</section>
+
+
+<!--/ Services End /-->
+
+
 
   <!--/ Property Star /-->
   <section class="section-property section-t8">
@@ -1038,117 +1046,35 @@
   </section>
   <!--/ Testimonials End /-->
 
-  <!--/ footer Star /-->
-  <section class="section-footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-sm-12 col-md-4">
-          <div class="widget-a">
-            <div class="w-header-a">
-              <h3 class="w-title-a text-brand">EstateAgency</h3>
-            </div>
-            <div class="w-body-a">
-              <p class="w-text-a color-text-a">
-                Enim minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip exea commodo consequat duis
-                sed aute irure.
-              </p>
-            </div>
-            <div class="w-footer-a">
-              <ul class="list-unstyled">
-                <li class="color-a">
-                  <span class="color-text-a">Phone .</span> contact@example.com</li>
-                <li class="color-a">
-                  <span class="color-text-a">Email .</span> +54 356 945234</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-4 section-md-t3">
-          <div class="widget-a">
-            <div class="w-header-a">
-              <h3 class="w-title-a text-brand">The Company</h3>
-            </div>
-            <div class="w-body-a">
-              <div class="w-body-a">
-                <ul class="list-unstyled">
-                  <li class="item-list-a">
-                    <i class="fa fa-angle-right"></i> <a href="#">Site Map</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="fa fa-angle-right"></i> <a href="#">Legal</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="fa fa-angle-right"></i> <a href="#">Agent Admin</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="fa fa-angle-right"></i> <a href="#">Careers</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="fa fa-angle-right"></i> <a href="#">Affiliate</a>
-                  </li>
-                  <li class="item-list-a">
-                    <i class="fa fa-angle-right"></i> <a href="#">Privacy Policy</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-sm-12 col-md-4 section-md-t3">
-          <div class="widget-a">
-            <div class="w-header-a">
-              <h3 class="w-title-a text-brand">International sites</h3>
-            </div>
-            <div class="w-body-a">
-              <ul class="list-unstyled">
-                <li class="item-list-a">
-                  <i class="fa fa-angle-right"></i> <a href="#">Venezuela</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="fa fa-angle-right"></i> <a href="#">China</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="fa fa-angle-right"></i> <a href="#">Hong Kong</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="fa fa-angle-right"></i> <a href="#">Argentina</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="fa fa-angle-right"></i> <a href="#">Singapore</a>
-                </li>
-                <li class="item-list-a">
-                  <i class="fa fa-angle-right"></i> <a href="#">Philippines</a>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <!--/ footer Start /-->
+  
+
+
+
+
+
   <footer>
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <nav class="nav-footer">
-            <ul class="list-inline">
-              <li class="list-inline-item">
-                <a href="#">Home</a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">About</a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">Property</a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">Blog</a>
-              </li>
-              <li class="list-inline-item">
-                <a href="#">Contact</a>
-              </li>
-            </ul>
-          </nav>
+          
           <div class="socials-a">
             <ul class="list-inline">
               <li class="list-inline-item">
@@ -1181,18 +1107,10 @@
           <div class="copyright-footer">
             <p class="copyright color-text-a">
               &copy; Copyright
-              <span class="color-a">EstateAgency</span> All Rights Reserved.
+              <span class="color-b"> Propiedades Mariano Acosta </span> All Rights Reserved.
             </p>
           </div>
-          <div class="credits">
-            <!--
-              All the links in the footer should remain intact.
-              You can delete the links only if you purchased the pro version.
-              Licensing information: https://bootstrapmade.com/license/
-              Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=EstateAgency
-            -->
-            Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-          </div>
+         
         </div>
       </div>
     </div>
