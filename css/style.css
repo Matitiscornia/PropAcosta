@@ -15,14 +15,22 @@
 
 
 
-@media screen and (max-width: 600px) {
-  /* Estilos para pantallas con ancho máximo de 600px */
-  
+@media screen and (max-width: 768px) {
+  .TitutloHeroIndexPersonalizado {
+
+    font-size: 5vh;
+    
+  }
 }
 
-
-
  
+@media screen and (min-width: 768px) {
+  .TitutloHeroIndexPersonalizado {
+
+    font-size: 8vh;
+    
+  }
+}
 
 
 
@@ -31,7 +39,7 @@
   text-transform: none; /* Para desactivar el texto en mayúsculas */
   font-family: 'Inter', sans-serif; /* Para aplicar la tipografía Inter */
   color:aliceblue;
-  font-size: 3.5em;
+
   font-weight: bold;
 }
 
@@ -39,7 +47,7 @@
   text-transform: none; /* Para desactivar el texto en mayúsculas */
   font-family: 'Inter', sans-serif; /* Para aplicar la tipografía Inter */
   color:aliceblue;
-  font-size: 1em;
+  font-size: 3vh;
   font-weight: bold;
 }
 
