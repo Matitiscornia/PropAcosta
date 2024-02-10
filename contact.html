@@ -114,31 +114,34 @@
         <div class="col-sm-12 section-t8">
           <div class="row">
             <div class="col-md-7">
-              <form class="form-a contactForm" action="" method="post" role="form">
+
+
+
+              <form class="form-a contactForm" name="my-google-sheet" id="my-google-sheet"  method="POST">
                 <div id="sendmessage">Tu mensaje ha sido enviado. Gracias!</div>
                 <div id="errormessage"></div>
                 <div class="row">
                   <div class="col-md-6 mb-3">
                     <div class="form-group">
-                      <input style = "border-radius: 3em;" type="text" name="name" class="form-control form-control-lg form-control-a" placeholder="Nombre y Apellido" data-rule="minlen:4" data-msg="Ingrese un nombre valido">
+                      <input style = "border-radius: 3em;" type="text" name="Nombre y Apellido" class="form-control form-control-lg form-control-a" placeholder="Nombre y Apellido" data-rule="minlen:4" data-msg="Ingrese un nombre valido">
                       <div class="validation"></div>
                     </div>
                   </div>
                   <div class="col-md-6 mb-3">
                     <div class="form-group">
-                      <input style = "border-radius: 3em;" name="email" type="email" class="form-control form-control-lg form-control-a" placeholder="Email" data-rule="email" data-msg="Por favor, ingrese un email valido">
+                      <input style = "border-radius: 3em;" name="Email" type="email" class="form-control form-control-lg form-control-a" placeholder="Email" data-rule="email" data-msg="Por favor, ingrese un email valido">
                       <div class="validation"></div>
                     </div>
                   </div>
                   <div class="col-md-12 mb-3">
                     <div class="form-group">
-                      <input style = "border-radius: 3em;" type="tel  " name="number" class="form-control form-control-lg form-control-a" placeholder="Telefono" data-rule="minlen:4" data-msg="Por favor, ingrese un número valido">
+                      <input style = "border-radius: 3em;" type="tel  " name="Telefono" class="form-control form-control-lg form-control-a" placeholder="Telefono" data-rule="minlen:4" data-msg="Por favor, ingrese un número valido">
                       <div class="validation"></div>
                     </div>
                   </div>
                   <div class="col-md-12 mb-3">
                     <div class="form-group">
-                      <textarea style = "border-radius: 1em;" name="Motivo de Contacto" class="form-control" name="message" cols="45" rows="8" data-rule="required" data-msg="Ingrese el motivo de contacto" placeholder="Motivo de Contacto"></textarea>
+                      <textarea style = "border-radius: 1em;" name="Motivo de Consulta" class="form-control"  cols="45" rows="8" data-rule="required" data-msg="Ingrese el motivo de contacto" placeholder="Motivo de Consulta"></textarea>
                       <div class="validation"></div>
                     </div>
                   </div>
@@ -147,6 +150,11 @@
                   </div>
                 </div>
               </form>
+
+
+
+
+
             </div>
             <div class="col-md-5 section-md-t3">
               <div class="icon-box section-b2">
@@ -231,7 +239,17 @@
     </div>
   </section>
   <!--/ Contact End /-->
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyI-qfgWtUfVHdg_uQ6L3hkqir33-ZilCiT8GIqqtGHr4NPJ00qpIKIxvC9s3wKq_49NQ/exec'
+    const form = document.forms['my-google-sheet']
 
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    }) 
+</script> 
   
   <!--/ footer Start /-->
   

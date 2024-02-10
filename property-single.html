@@ -32,6 +32,8 @@
     Author: BootstrapMade.com
     License: https://bootstrapmade.com/license/
   ======================================================= -->
+  <script src="https://apis.google.com/js/api.js"></script>
+
 </head>
 
 <body>
@@ -294,35 +296,39 @@
 
             <div class="col-md-12 col-lg-4">
               <div class="property-contact">
-                <form class="form-a">
+                <form class="form-a" name="my-google-sheet" id="my-google-sheet"  method="POST">
                   <div class="row">
                     
                     <div class="col-md-12 mb-1">
                       <div class="form-group">
-                        <input style="border-radius: 5em;" type="text" class="form-control form-control-lg form-control-a" id="inputName"
-                          placeholder="Nombre y Apellido" required>
+                        <label for="Nombre y Apellido">Nombre y Apellido</label>
+                        <input style="border-radius: 5em;" type="text" class="form-control form-control-lg form-control-a" id="inputName" name="Nombre y Apellido"
+       placeholder="Nombre y Apellido" required>
                       </div>
                     </div>
                     <div class="col-md-12 mb-1">
                       <div class="form-group">
-                        <input style="border-radius: 5em;" type="tel" class="form-control form-control-lg form-control-a" id="inputName"
-                          placeholder="Telefono" required>
+                        <label for="Telefono">Telefono</label>
+                        <input style="border-radius: 5em;" type="tel" class="form-control form-control-lg form-control-a" id="inputPhone" name="Telefono"
+       placeholder="Telefono" required>
                       </div>
                     </div>
                     <div class="col-md-12 mb-1">
                       <div class="form-group">
-                        <input style="border-radius: 5em;"  type="email" class="form-control form-control-lg form-control-a" id="inputEmail1"
-                          placeholder="Email " required>
+                        <label for="Email">Email</label>
+                        <input style="border-radius: 5em;" type="email" class="form-control form-control-lg form-control-a" id="inputEmail1" name="Email"
+       placeholder="Email" required>
                       </div>
                     </div>
                     <div class="col-md-12 mb-1">
                       <div class="form-group">
-                        <textarea style="border-radius: 1em;" id="textMessage" class="form-control" placeholder="Motivo de Consulta" name="message" cols="45"
-                          rows="8" required></textarea>
+                        <label for="Motivo de Consulta">Motivo de Consulta</label>
+                        <textarea style="border-radius: 1em;" id="textMessage" class="form-control" placeholder="Motivo de Consulta" name="Motivo de Consulta"
+            cols="45" rows="8" required></textarea>
                       </div>
                     </div>
                     <div class="col-md-12">
-                      <button style="border-radius: 5em; " type="submit" class="btn btn-a">Enviar Mensaje  </button>
+                      <button type="submit" style="border-radius: 5em;" class="btn btn-a">Enviar Mensaje</button>
                     </div>
                   </div>
                 </form>
@@ -339,6 +345,32 @@
       </div>
     </div>
   </section>
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyI-qfgWtUfVHdg_uQ6L3hkqir33-ZilCiT8GIqqtGHr4NPJ00qpIKIxvC9s3wKq_49NQ/exec'
+    const form = document.forms['my-google-sheet']
+
+    form.addEventListener('submit', e => {
+        e.preventDefault()
+        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    }) 
+</script>
+
+
+
+
   <!--/ Property Single End /-->
 
 
