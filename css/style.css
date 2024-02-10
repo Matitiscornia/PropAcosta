@@ -18,10 +18,17 @@
 @media screen and (max-width: 768px) {
   .TitutloHeroIndexPersonalizado {
 
-    font-size: 3.5vh;
+    font-size: 4vh;
     margin-right: 6vh;
     margin-left: 6vh;
   }
+
+  .BotonHeroPersonalizado {
+
+    font-size: 3vh;
+
+  }
+
 }
 
  
@@ -29,7 +36,14 @@
   .TitutloHeroIndexPersonalizado {
 
     font-size: 6vh;
-    
+    margin-right: 6vh;
+    margin-left: 6vh;
+  }
+
+  .BotonHeroPersonalizado {
+
+    font-size: 3vh;
+
   }
 }
 
@@ -48,7 +62,6 @@
   text-transform: none; /* Para desactivar el texto en mayúsculas */
   font-family: 'Inter', sans-serif; /* Para aplicar la tipografía Inter */
   color:aliceblue;
-  font-size: 3vh;
   font-weight: bold;
 }
 
