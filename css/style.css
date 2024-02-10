@@ -28,8 +28,9 @@
 @media screen and (min-width: 768px) {
   .TitutloHeroIndexPersonalizado {
 
-    font-size: 4vh;
-    
+    font-size: 6vh;
+    margin-right: 6vh;
+    margin-left: 6vh;
   }
 }
 
