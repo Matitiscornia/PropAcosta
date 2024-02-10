@@ -198,45 +198,57 @@
 
 
 -->
+<style>
+  @media (max-width: 768px) {
+    .card-header-c.d-flex {
+      flex-direction: column;
+    }
 
+    .card-header-c.d-flex .col-md-6 {
+      width: 100%;
+      height: 50%;
+      padding: 0;
+    }
 
+    .TituloMapsSeccion {
+      display: none;
+    }
+  }
+
+  /* Estilos adicionales para el mapa */
+  #map-container {
+    height: 100%;
+  }
+
+  #map {
+    height: 100%;
+  }
+</style>
 
 
 
 <!-- Google Maps Start -->
-<section class="SeccionMaps">
-
-  <div class="ContainerMaps">
-    <div class="row">
-      <div class="col-md-6">
-        <div class="card-box-c foo">
-          <div class="card-header-c d-flex">
-            <div class="card-title-c align-self-center">
-              <h1 class="TituloMapsSeccion">Mariano Acosta, <br>Provincia<br> de Buenos Aires</h1>
-            </div>
-          </div>
-        </div>
-      </div>
-      
-              
-            
-      <div class="col-md-6">
-        <!-- Aquí colocaremos el mapa -->
-        <div id="map-container">
-
-          <div id="map">
-            <iframe width="100%" height="100%" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0" allowfullscreen src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=-34.699812,%20-58.811403+(Mi%20nombre%20de%20egocios)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
-              </iframe>
-          </div>
-
-
-          <div style="width: 100%">
-
+<div class="card-header-c d-flex">
+  <div class="col-md-6">
+    <div class="card-box-c foo">
+      <div class="card-header-c d-flex">
+        <div class="card-title-c align-self-center">
+          <h1 class="TituloMapsSeccion">Mariano Acosta, <br>Provincia<br> de Buenos Aires</h1>
         </div>
       </div>
     </div>
   </div>
-</section>
+
+  <div class="col-md-6">
+    <div id="map-container">
+      <div id="map">
+        <iframe width="100%" height="100%" frameborder="0" scrolling="yes" marginheight="0" marginwidth="0" allowfullscreen src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=es&amp;q=-34.699812,%20-58.811403+(Mi%20nombre%20de%20egocios)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+
 
 <!--/ Google Maps End /-->
 

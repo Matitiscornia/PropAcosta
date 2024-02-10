@@ -11,38 +11,13 @@
 
 
 /* ---------------------Principio De cosas agregadas---------------------*/
+/* Ocultar el título en pantallas más pequeñas */
 
 
 
-@media (max-width: 600px){
-
-
-  .TitutloHeroIndexPersonalizado {
-    text-transform: none; /* Para desactivar el texto en mayúsculas */
-    font-family: 'Inter', sans-serif; /* Para aplicar la tipografía Inter */
-    color:aliceblue;
-    font-size: 0.1vw;
-    font-weight: bold;
-    max-width: 100%; /* Para asegurar que el texto no se desborde en pantallas pequeñas */
-    overflow: hidden; /* Si el texto es demasiado largo para la pantalla, oculta el exceso */
-    
-
-  }
-
-  .row{
-    margin-right: 0vw;
-  }
-
-  .navbar-brand {
-      font-size: 1.2rem; /* Reducir tamaño de fuente del logotipo en dispositivos pequeños */
-  }
-
-
-  .navbar-brand {
-    font-size: 1.4rem; /* Reducir tamaño de fuente del logotipo en dispositivos pequeños */
-  }
-
-
+@media screen and (max-width: 600px) {
+  /* Estilos para pantallas con ancho máximo de 600px */
+  
 }
 
 
@@ -105,18 +80,40 @@ display: inline-block;
   align-items: center; /* Centra verticalmente los elementos */
   margin-left: 5vw;
 }
+
+
 #map-container {
-  height: 97%; /* Toma el 100% de la altura de su contenedor */
-  width: 100%;
-  position: relative; /* Para que los elementos internos se posicionen relativos a este contenedor */
-  overflow: hidden; /* Para ocultar cualquier contenido que exceda del contenedor */
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 56.25%; /* 16:9 ratio para mantener la relación de aspecto del mapa */
+  padding-top: 56.25%;
+  height: 100vh;
   border-radius: 5vw;
 }
+
+#map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Cambiado a 100% para que se ajuste al contenedor */
+}
+
+
 #map {
   width: 100%; /* Ocupa todo el ancho del contenedor */
   height: 100%; /* Ocupa el 100% del espacio vertical disponible en la sección, restando 100px (ajusta según la altura de la barra de navegación u otros elementos fijos que tengas) */
   max-width: 100%; /* Ocupa como máximo el 50% del ancho de la sección */
+  margin-right: auto;
+  margin-left: auto; /* Ajusta el margen izquierdo automáticamente */
+
 }
+
+
+
+
+
+
 .SeccionMaps {
   padding: 0;
   height: 100vh;
@@ -1281,9 +1278,12 @@ a:hover {
   margin: 0 auto;
 }
 
-.property-price .card-header-c {
+.property-price  {
   padding: 0;
 }
+
+
+
 
 .summary-list {
   padding-right: 1rem;
@@ -1451,7 +1451,7 @@ a:hover {
 }
 
 .card-header-c {
-  padding: 0 1rem 1rem 1rem;
+  padding: 1rem 1rem 1rem 1rem;
 }
 
 .card-body-c {
@@ -2049,6 +2049,7 @@ footer .credits {
   .card-header-a .card-title-a {
     font-size: 2rem;
   }
+
 
   .card-info .card-info-title {
     font-size: 1rem;
