@@ -28,27 +28,63 @@
 
 </head>
 
-<style>
-
-  .claseB1{
-    background-color: beige;
-  }
-  
-</style >
-
-<body class = "claseB1">
 
 
+<body>
+
+<!--/ Nav Star /-->
+<nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
+  <div class="container">
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
+        aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    <a class="navbar-brand text-brand" href="index.html">Default</span></a>
+    <div class="btn btn-link nav-search navbar-toggle-box-collapse d-md-none" data-toggle="collapse"
+      data-target="#navbarTogglerDemo01" aria-expanded="false">
+      <span class="fa fa-search" aria-hidden="true"></span>
 
 
 
+  </div>
+    <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
+        
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="property-grid.html">Propiedades</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">Nosotros</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link " href="contact.html">Contactanos</a>
+          </li>
+        </ul>
+      </div>
+    <button type="button" class="btn btn-b-n navbar-toggle-box-collapse d-none d-md-block" data-toggle="collapse"
+      data-target="#navbarTogglerDemo01" aria-expanded="false">
+      <span class="fa fa-search" aria-hidden="true"></span>
+    </button>
+  </div>
+</nav>
+<!--/ Nav End /-->
 
 
 
-   <!--/ Nav Star /-->
+   <!--/ Nav Star 
   <nav class="navbar navbar-default navbar-trans navbar-expand-lg fixed-top">
     <div class="container">
-      
+      <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarDefault"
+        aria-controls="navbarDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
 
       <a class="navbar-brand text-brand" href="index.html">Default</a>
      
@@ -75,7 +111,7 @@
     
     </div>
   </nav>
-  <!--/ Nav End /-->
+  / Nav End /-->
 
 
 
@@ -87,45 +123,6 @@
 
 
 
-  <style>
-    .titulo-personalizado1 {
-      text-transform: none; /* Para desactivar el texto en mayúsculas */
-      font-family: 'Inter', sans-serif; /* Para aplicar la tipografía Inter */
-      color:aliceblue;
-      font-size: 4em;
-      font-weight: bold;
-    }
-
-    .titulo-personalizado2 {
-      text-transform: none; /* Para desactivar el texto en mayúsculas */
-      font-family: 'Inter', sans-serif; /* Para aplicar la tipografía Inter */
-      color:aliceblue;
-      font-size: 1em;
-      font-weight: bold;
-    }
-
-    .btn-animation {
-      display: inline-block;
-      padding: 10px 20px;
-      
-      transition: transform 0.3s ease;
-   }
-
-    .btn-animation:hover {
-      transform: scale(0.9);
-    }
-
-    .price-a {
-      display: inline-block;
-    }
-
-  .titulo-personalizado2 {
-    display: inline-block;
-  }
-
-
-  </style>
-  
 
 
   <!--/ ------------------------------------- Portada Start -------------------------------------  /-->
@@ -139,12 +136,12 @@
             <div class="row justify-content-center">
               <div class="col-lg-8">
                 <div class="intro-body text-center">
-                  <h1 class="titulo-personalizado1">Adquiri tu Propiedad en Mariano Acosta</h1>
+                  <h1 class="TitutloHeroIndexPersonalizado">Adquiri tu Propiedad en Mariano Acosta</h1>
 
                   <p class="intro-subtitle intro-price">
-                    <a href="property-grid.html" class="btn-animation">
+                    <a href="property-grid.html" class="BotonHeroAnimacion">
                       <span class="price-a">
-                        <span class="titulo-personalizado2">Ver Propiedades</span>
+                        <span class="BotonHeroPersonalizado">Ver Propiedades</span>
                       </span>
                     </a> 
                   </p>
@@ -173,49 +170,6 @@
 
 
 
-<style>
-    .titulo-personalizado3 {
-      text-transform: none; /* Para desactivar el texto en mayúsculas */
-      font-family: 'Inter', sans-serif; /* Para aplicar la tipografía Inter */
-      color:black;
-      font-size: 4em;
-      font-weight: bold;
-      height: 50%;
-      padding: 0; /* Elimina todo el relleno */
-      height: 100vh; /* Ajusta la altura al 100% del viewport height */
-      display: flex;
-      justify-content: center; /* Centra horizontalmente los elementos */
-      align-items: center; /* Centra verticalmente los elementos */
-      margin-left: 2.5em;
-    }
-
-
-
-    #map-container {
-      height: 97%; /* Toma el 100% de la altura de su contenedor */
-      width: 100%;
-      position: relative; /* Para que los elementos internos se posicionen relativos a este contenedor */
-      overflow: hidden; /* Para ocultar cualquier contenido que exceda del contenedor */
-      border-radius: 5em;
-    }
-
-    #map {
-      width: 100%; /* Ocupa todo el ancho del contenedor */
-      height: 100%; /* Ocupa el 100% del espacio vertical disponible en la sección, restando 100px (ajusta según la altura de la barra de navegación u otros elementos fijos que tengas) */
-      max-width: 100%; /* Ocupa como máximo el 50% del ancho de la sección */
-    }
-
-    .section-personalizada {
-      padding: 0;
-      height: 100vh;
-    }
-
-    .container1 {
-      padding: 0; /* Elimina el padding */
-      margin: 0; /* Elimina el margin */
-      max-width: 100%;
-}
-</style>
 
 
 <!-- Agrega el siguiente script para cargar la API de Google Maps 
@@ -250,15 +204,15 @@
 
 
 <!-- Google Maps Start -->
-<section class="section-personalizada">
+<section class="SeccionMaps">
 
-  <div class="container1">
+  <div class="ContainerMaps">
     <div class="row">
       <div class="col-md-6">
         <div class="card-box-c foo">
           <div class="card-header-c d-flex">
             <div class="card-title-c align-self-center">
-              <h1 class="titulo-personalizado3">Mariano Acosta, <br>Provincia<br> de Buenos Aires</h1>
+              <h1 class="TituloMapsSeccion">Mariano Acosta, <br>Provincia<br> de Buenos Aires</h1>
             </div>
           </div>
         </div>
@@ -287,32 +241,13 @@
 <!--/ Google Maps End /-->
 
 
-<style>
 
 
-  .foto-centrada {
-    background-color: #8B4513; /* Marrón */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    border-radius: 5em; /* Bordes curvados */
-  }
-  
-  .contenedor {
-    max-width: 80%; /* Ancho máximo del contenedor */
-  }
-  
-  img {
-    max-width: 100%; /* La imagen no excederá el ancho del contenedor */
-    border-radius: 8em; /* Bordes curvados de la imagen */
-}
-</style>
 
 
-<section class="foto-centrada">
-  <div class="contenedor">
-    <img src="imagenes/Ejemplo Mapa.jpeg" alt="Foto centrada">
+<section class="FotoMapaPropiedades">
+  <div class="ContainerMapaPropiedades">
+    <img class="ImagenMapaPropiedades" src="imagenes/Ejemplo Mapa.jpeg" alt="Foto centrada">
   </div>
 </section>
 

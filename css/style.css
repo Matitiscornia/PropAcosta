@@ -9,6 +9,165 @@
 //--//-->   STYLES GENERALES
 ======================================*/
 
+
+/* ---------------------Principio De cosas agregadas---------------------*/
+
+
+
+@media (max-width: 600px){
+
+
+  .TitutloHeroIndexPersonalizado {
+    text-transform: none; /* Para desactivar el texto en mayúsculas */
+    font-family: 'Inter', sans-serif; /* Para aplicar la tipografía Inter */
+    color:aliceblue;
+    font-size: 0.1vw;
+    font-weight: bold;
+    max-width: 100%; /* Para asegurar que el texto no se desborde en pantallas pequeñas */
+    overflow: hidden; /* Si el texto es demasiado largo para la pantalla, oculta el exceso */
+    
+
+  }
+
+  .row{
+    margin-right: 0vw;
+  }
+
+  .navbar-brand {
+      font-size: 1.2rem; /* Reducir tamaño de fuente del logotipo en dispositivos pequeños */
+  }
+
+
+  .navbar-brand {
+    font-size: 1.4rem; /* Reducir tamaño de fuente del logotipo en dispositivos pequeños */
+  }
+
+
+}
+
+
+
+ 
+
+
+
+
+.TitutloHeroIndexPersonalizado {
+  text-transform: none; /* Para desactivar el texto en mayúsculas */
+  font-family: 'Inter', sans-serif; /* Para aplicar la tipografía Inter */
+  color:aliceblue;
+  font-size: 3.5em;
+  font-weight: bold;
+}
+
+.BotonHeroPersonalizado {
+  text-transform: none; /* Para desactivar el texto en mayúsculas */
+  font-family: 'Inter', sans-serif; /* Para aplicar la tipografía Inter */
+  color:aliceblue;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+.BotonHeroAnimacion {
+  display: inline-block;
+  padding: 10px 20px;
+  
+  transition: transform 0.3s ease;
+}
+
+.BotonHeroAnimacion:hover {
+  transform: scale(0.9);
+}
+
+.price-a {
+  display: inline-block;
+}
+
+.BotonHeroPersonalizado {
+display: inline-block;
+}
+
+
+/* ---------------------Seccion Maps---------------------*/
+
+
+.TituloMapsSeccion {
+  text-transform: none; /* Para desactivar el texto en mayúsculas */
+  font-family: 'Inter', sans-serif; /* Para aplicar la tipografía Inter */
+  color:black;
+  font-size: 4.5vw;
+  font-weight: bold;
+  height: 50%;
+  padding: 0; /* Elimina todo el relleno */
+  height: 100vh; /* Ajusta la altura al 100% del viewport height */
+  display: flex;
+  justify-content: center; /* Centra horizontalmente los elementos */
+  align-items: center; /* Centra verticalmente los elementos */
+  margin-left: 5vw;
+}
+#map-container {
+  height: 97%; /* Toma el 100% de la altura de su contenedor */
+  width: 100%;
+  position: relative; /* Para que los elementos internos se posicionen relativos a este contenedor */
+  overflow: hidden; /* Para ocultar cualquier contenido que exceda del contenedor */
+  border-radius: 5vw;
+}
+#map {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  height: 100%; /* Ocupa el 100% del espacio vertical disponible en la sección, restando 100px (ajusta según la altura de la barra de navegación u otros elementos fijos que tengas) */
+  max-width: 100%; /* Ocupa como máximo el 50% del ancho de la sección */
+}
+.SeccionMaps {
+  padding: 0;
+  height: 100vh;
+  background-color: white;
+}
+.ContainerMaps {
+      padding: 0; /* Elimina el padding */
+      margin: 0; /* Elimina el margin */
+      max-width: 100%;
+}
+
+
+
+
+/*  ---------------------Seccion de Mapa propiedades---------------------*/
+
+.FotoMapaPropiedades {
+  background-color: #8B4513; /* Marrón */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  border-radius: 5em; /* Bordes curvados */
+}
+
+.ContainerMapaPropiedades {
+  max-width: 80%; /* Ancho máximo del ContainerMapaPropiedades */
+}
+
+.ImagenMapaPropiedades {
+  max-width: 100%; /* La imagen no excederá el ancho del ContainerMapaPropiedades */
+  border-radius: 8em; /* Bordes curvados de la imagen */
+}
+
+
+
+
+
+
+
+
+
+/* ---------------------Fin De cosas agregadas---------------------*/
+ 
+
+
+
+
+
+
+
 body {
   font-family: 'Poppins', sans-serif;
   color: #555555;
